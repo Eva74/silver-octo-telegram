@@ -2,6 +2,7 @@ import unittest
 from utils import find_median
 from utils import find_avg
 from utils import is_palindrome
+from utils import is_odd_or_even
 
 
 class MyTestCase(unittest.TestCase):
@@ -21,8 +22,15 @@ class MyTestCase(unittest.TestCase):
 
     def test_is_palindrome(self):
         #  test if the string is a palindrome
-        mystring = 'potatoes'
-        self.assertEqual(is_palindrome(mystring), False)
-        mystring2 = 'salas'
-        self.assertEqual(is_palindrome(mystring2), True)
+        s = 'potatoes'
+        self.assertEqual(is_palindrome(s), False)
+        s = 'salas'
+        self.assertEqual(is_palindrome(s), True)
+
+    def test_is_odd_or_even(self):
+        #  test if the input(int) is even
+        num = 2
+        num2 = 1
+        self.assertEqual(is_odd_or_even(num), True)
+        self.assertEqual(is_odd_or_even(num2), False)
 
