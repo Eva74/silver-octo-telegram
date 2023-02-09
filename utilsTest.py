@@ -3,6 +3,7 @@ from utils import find_median
 from utils import find_avg
 from utils import is_palindrome
 from utils import is_odd_or_even
+from utils import int_to_char
 
 
 class MyTestCase(unittest.TestCase):
@@ -33,4 +34,12 @@ class MyTestCase(unittest.TestCase):
         num2 = 1
         self.assertEqual(is_odd_or_even(num), True)
         self.assertEqual(is_odd_or_even(num2), False)
+
+    def test_int_to_char(self):
+        # test if the characters are returned after inputting numbers
+        mylist = [72, 101, 108, 108, 111]
+        output = ''
+        for i in mylist:
+            output += str(int_to_char(i))
+        self.assertEqual(output, 'Hello')
 

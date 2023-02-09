@@ -41,3 +41,7 @@ def is_odd_or_even(num):
     else:
         return False
 
+
+def int_to_char(num):
+    return chr(num)
+
