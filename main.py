@@ -19,3 +19,11 @@ print(is_odd_or_even(myList[0]))
 
 num = 65
 print(int_to_char(num))
+
+# check if number in list is odd or even
+print("The current list is: " + str(myList))
+for i in myList:
+    if is_odd_or_even(i):
+        print(str(i) + " is even")
+    else:
+        print(str(i) + " is odd")
