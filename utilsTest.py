@@ -4,6 +4,7 @@ from utils import find_avg
 from utils import is_palindrome
 from utils import is_odd_or_even
 from utils import int_to_char
+from utils import char_to_int
 
 
 class MyTestCase(unittest.TestCase):
@@ -42,4 +43,9 @@ class MyTestCase(unittest.TestCase):
         for i in mylist:
             output += str(int_to_char(i))
         self.assertEqual(output, 'Hello')
+
+    def test_chr_to_int(self):
+        # test if the proper integers return after inputting a character
+        mychar = 'o'
+        self.assertEqual(char_to_int(mychar), 111)
 
