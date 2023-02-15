@@ -33,3 +33,18 @@ print(int_to_char(num))
 myChar = 'Z'
 print("The character " + myChar + " is the number:")
 print(char_to_int(myChar))
+
+# print out sum of letter is string as ascii numbers
+user_string = 'paper'
+user_string_ascii = []
+for i in user_string:
+    user_string_ascii.append(char_to_int(i))
+print('The ascii conversion of the given string is: ')
+print(user_string_ascii)
+user_string_ascii.sort()
+print("The sorted list is: ")
+print(user_string_ascii)
+user_string_ascii_sum = 0
+for i in user_string_ascii:
+    user_string_ascii_sum += i
+print("The sum of the list is: " + str(user_string_ascii_sum))
