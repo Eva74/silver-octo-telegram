@@ -6,25 +6,50 @@ from utils import is_odd_or_even
 from utils import int_to_char
 from utils import char_to_int
 
-myList = [0, 2, 3, 4, 5, 6]
-print("The average of the list is: " + str(find_avg(myList)))
-print("The median of the list is " + str(find_median(myList)))
-rev_list(myList)
-print("The list in reverse is: " + str(myList))
 
-myString = 'salas'
-print(is_palindrome(myString))
+class Guest:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
 
-print("Is the first element in the list even?")
-print(is_odd_or_even(myList[0]))
 
-# check if number in list is odd or even
-print("The current list is: " + str(myList))
-for i in myList:
+print("The following guests (name, age) have arrived: ")
+guest1 = Guest("Maria", 48)
+print(guest1.name)
+print(guest1.age)
+
+guest2 = Guest("Hidalgo", 36)
+print(guest2.name)
+print(guest2.age)
+
+guest3 = Guest("Ana", 9)
+print(guest3.name)
+print(guest3.age)
+
+guestList = [guest1, guest2, guest3]
+guestAges = []
+for i in guestList:
+    guestAges.append(i.age)
+print("The guest ages are " + str(guestAges))
+print("The average of guest age is: " + str(find_avg(guestAges)))
+print("The median of guest age is " + str(find_median(guestAges)))
+
+# check if ages are odd or even. Function returns a Boolean
+print("Is the first guests' age even?")
+print(is_odd_or_even(guestAges[0]))
+for i in guestAges:
     if is_odd_or_even(i):
         print(str(i) + " is even")
     else:
         print(str(i) + " is odd")
+
+rev_list(guestAges)
+print("The list in reverse is: " + str(guestAges))
+for i in guestList:
+    if is_palindrome(i.name):
+        print(i.name + " is a palindrome")
+    else:
+        print(i.name)
 
 num = 65
 print("The number " + str(num) + " is the character:")

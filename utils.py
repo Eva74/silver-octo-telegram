@@ -25,10 +25,9 @@ def is_palindrome(string):
     arr2 = []
 
     for i in string:
-        arr.append(i)
+        arr.append(i.upper())
     for i in arr:
-        arr2.insert(0, i)
-    print("Is the string a palindrome? ")
+        arr2.insert(0, i.upper())
     if arr == arr2:
         return True
     else:
